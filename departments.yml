@@ -1,10 +1,25 @@
 server:
   port: 8089
+
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
+
 management:
   tracing:
     sampling:
       probability: 1.0
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/micro
+    username: postgres
+    password: Basha@3934
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
